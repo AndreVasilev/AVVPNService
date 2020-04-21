@@ -1,0 +1,16 @@
+PODS:
+  - AVVPNService (0.1.0)
+
+DEPENDENCIES:
+  - AVVPNService (from `../`)
+
+EXTERNAL SOURCES:
+  AVVPNService:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AVVPNService: a2e5a3913481946e287bb778876522f702e902cf
+
+PODFILE CHECKSUM: 554d2a145c8e4ba31ce36b35ca7d9d41444b84b8
+
+COCOAPODS: 1.9.0.beta.2

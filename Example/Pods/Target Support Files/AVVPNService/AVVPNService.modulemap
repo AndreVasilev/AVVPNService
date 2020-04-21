@@ -1,0 +1,6 @@
+framework module AVVPNService {
+  umbrella header "AVVPNService-umbrella.h"
+
+  export *
+  module * { export * }
+}

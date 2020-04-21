@@ -1,11 +1,8 @@
 use_frameworks!
+platform :ios, '9.3'
 
 target 'AVVPNService_Example' do
-  pod 'AVVPNService', :path => '../'
 
-  target 'AVVPNService_Tests' do
-    inherit! :search_paths
+    pod 'AVVPNService', :path => '../'
 
-    
-  end
 end
