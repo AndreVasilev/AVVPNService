@@ -6,7 +6,7 @@
 
 ## Requirements
 - iOS 9.3+
-- Swift 5.0
+- Swift 5
 
 ## Installation
 
