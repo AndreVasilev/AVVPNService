@@ -20,6 +20,8 @@ or just add AVVPNService/Classes/ to your project
 
 ## Usage
 
+Select Signing & Capabilities pane of the project editor -> Add **Personal VPN** capability
+
 ```swift
 import AVVPNService
 
