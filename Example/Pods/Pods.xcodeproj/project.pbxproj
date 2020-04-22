@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		06E1EDF8212C77CEA74ACABA450AC83E /* Pods-AVVPNService_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3E9CCB8211D35D3B7593BDA7A8D66D /* Pods-AVVPNService_Example-dummy.m */; };
-		078458ADF89FB9280154117BC3778097 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F3846B81A58BCE08298A13C3D59CF /* Credentials.swift */; };
 		078A2B14415B68407711C4DF7FEB1FF2 /* AVVPNService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A12B0E661DCB5985D73D363B128936 /* AVVPNService-dummy.m */; };
 		2EC722F25184D173014132E9E269CB1F /* AVVPNService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 491F0B892EACF879BC6E0C5B5646630B /* AVVPNService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		397D266BD3ED754F871BFF39B16A7DC3 /* AVVPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACD8671B534CBEFB2344EF8D62F3283 /* AVVPNService.swift */; };
+		55C03EF92450541C003131EB /* AVVPNCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C03EF72450541C003131EB /* AVVPNCredentials.swift */; };
+		55C03EFA2450541C003131EB /* AVVPNUserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C03EF82450541C003131EB /* AVVPNUserDefaultsService.swift */; };
 		5816DB050A0A2D5BA98118E9D92B03C1 /* Pods-AVVPNService_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 512404B0D6DC1B2CA1623E7573D7F028 /* Pods-AVVPNService_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6F7ECEBD952CF4DA29F844ACAA1F209 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		D62706CD6AAAF444AB65EA5653DFC877 /* AVVPNKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789E2F89651719125A0F9A487564560A /* AVVPNKeychainService.swift */; };
@@ -39,12 +40,13 @@
 		491F0B892EACF879BC6E0C5B5646630B /* AVVPNService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AVVPNService-umbrella.h"; sourceTree = "<group>"; };
 		512404B0D6DC1B2CA1623E7573D7F028 /* Pods-AVVPNService_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AVVPNService_Example-umbrella.h"; sourceTree = "<group>"; };
 		54FB08AC72EAD80B2C863838AF421856 /* Pods-AVVPNService_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AVVPNService_Example-frameworks.sh"; sourceTree = "<group>"; };
+		55C03EF72450541C003131EB /* AVVPNCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVVPNCredentials.swift; path = AVVPNService/Classes/AVVPNCredentials.swift; sourceTree = "<group>"; };
+		55C03EF82450541C003131EB /* AVVPNUserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVVPNUserDefaultsService.swift; path = AVVPNService/Classes/AVVPNUserDefaultsService.swift; sourceTree = "<group>"; };
 		5B33DB57CD2DC34FAAF30163E3BEE0E5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6961B3234DE2AD1E950FADA94C961A96 /* AVVPNService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AVVPNService-prefix.pch"; sourceTree = "<group>"; };
 		748BE742E92B7681945FA2ABB7A5DF6B /* Pods-AVVPNService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AVVPNService_Example.release.xcconfig"; sourceTree = "<group>"; };
 		789E2F89651719125A0F9A487564560A /* AVVPNKeychainService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVVPNKeychainService.swift; path = AVVPNService/Classes/AVVPNKeychainService.swift; sourceTree = "<group>"; };
 		7D52868368C8FE1F8D38000ECBD7BB36 /* Pods-AVVPNService_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AVVPNService_Example-Info.plist"; sourceTree = "<group>"; };
-		846F3846B81A58BCE08298A13C3D59CF /* Credentials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = AVVPNService/Classes/Credentials.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1FEA2AA18F860878FA3B79D2257EAE4 /* Pods-AVVPNService_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AVVPNService_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A99EDFF11E13AF7AAA60CC2F8A126D70 /* AVVPNService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AVVPNService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -125,7 +127,8 @@
 			children = (
 				CACD8671B534CBEFB2344EF8D62F3283 /* AVVPNService.swift */,
 				789E2F89651719125A0F9A487564560A /* AVVPNKeychainService.swift */,
-				846F3846B81A58BCE08298A13C3D59CF /* Credentials.swift */,
+				55C03EF82450541C003131EB /* AVVPNUserDefaultsService.swift */,
+				55C03EF72450541C003131EB /* AVVPNCredentials.swift */,
 				634748D140859F24333B1B72E9A1E9DC /* Pod */,
 				CAFE84222C2791A191E415054015A785 /* Support Files */,
 			);
@@ -293,10 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C03EFA2450541C003131EB /* AVVPNUserDefaultsService.swift in Sources */,
 				D62706CD6AAAF444AB65EA5653DFC877 /* AVVPNKeychainService.swift in Sources */,
 				078A2B14415B68407711C4DF7FEB1FF2 /* AVVPNService-dummy.m in Sources */,
+				55C03EF92450541C003131EB /* AVVPNCredentials.swift in Sources */,
 				397D266BD3ED754F871BFF39B16A7DC3 /* AVVPNService.swift in Sources */,
-				078458ADF89FB9280154117BC3778097 /* Credentials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

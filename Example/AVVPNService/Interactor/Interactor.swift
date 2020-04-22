@@ -21,7 +21,13 @@ class Interactor {
     private let vpnService = AVVPNService.shared
     private var reloadIpLocationTask: URLSessionDataTask?
 
-    var type: VPNType = .ipsec
+    var type: AVVPNType = .ipsec {
+        didSet {
+            if oldValue != type {
+                vpnService.removeConfiguration()
+            }
+        }
+    }
     var info: String? { didSet { viewController?.tableView.reloadData() } }
     lazy var state: State = .disconnected
 
@@ -29,7 +35,7 @@ class Interactor {
         vpnService.delegate = self
     }
 
-    func connect(credentials: Credentials) {
+    func connect(credentials: AVVPNCredentials) {
         guard state == .disconnected else { return }
         vpnService.connect(credentials: credentials) { [weak self] in
             if let error = $0 {

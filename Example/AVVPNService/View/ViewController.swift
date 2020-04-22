@@ -100,7 +100,7 @@ private extension ViewController {
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
 
-        // Set credentials for testing faster
+//         Set credentials for testing faster
 //        if let configCell = cell as? IPSecConfigurationCell {
 //            configCell.serverTextField.text = ""
 //            configCell.usernameTextField.text = ""
@@ -122,7 +122,7 @@ private extension ViewController {
         }
     }
 
-    func getCredentials() -> Credentials? {
+    func getCredentials() -> AVVPNCredentials? {
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 1))
         if let cell = cell as? IPSecConfigurationCell {
             let server = cell.serverTextField.text ?? ""
@@ -130,7 +130,7 @@ private extension ViewController {
             let password = cell.passwordTextField.text ?? ""
             let key = cell.sharedTextField.text ?? ""
             guard [server, username, password, key].filter({ !$0.isEmpty }).count == 4 else { return nil }
-            return Credentials.IPSec(server: server, username: username, password: password, shared: key)
+            return AVVPNCredentials.IPSec(server: server, username: username, password: password, shared: key)
         } else if let cell = cell as? IKEv2ConfigurationCell {
             let server = cell.serverTextField.text ?? ""
             let username = cell.usernameTextField.text ?? ""
@@ -138,7 +138,7 @@ private extension ViewController {
             let remote = cell.remoteTextField.text ?? ""
             let local = cell.localTextField.text ?? ""
             guard [server, username, password, remote].filter({ !$0.isEmpty }).count == 4 else { return nil }
-            return Credentials.IKEv2(server: server, username: username, password: password, remoteId: remote, localId: local)
+            return AVVPNCredentials.IKEv2(server: server, username: username, password: password, remoteId: remote, localId: local)
         } else {
             return nil
         }

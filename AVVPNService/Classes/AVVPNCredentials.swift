@@ -8,20 +8,20 @@
 
 import Foundation
 
-public enum VPNType: String, CaseIterable {
+public enum AVVPNType: String, CaseIterable {
     case ike2 = "IKEv2"
     case ipsec = "IPSec"
 }
 
-public class Credentials {
+public class AVVPNCredentials {
 
-    let type: VPNType
+    let type: AVVPNType
     let title: String
     let server: String
     let username: String
     let password: String
 
-    private init(_ type: VPNType, title: String, server: String, username: String, password: String) {
+    private init(_ type: AVVPNType, title: String, server: String, username: String, password: String) {
         self.type = type
         self.title = title
         self.server = server
@@ -29,7 +29,7 @@ public class Credentials {
         self.password = password
     }
 
-    public class IPSec: Credentials {
+    public class IPSec: AVVPNCredentials {
         let shared: String
 
         public init(title: String = "AVVPNService", server: String, username: String, password: String, shared: String) {
@@ -38,7 +38,7 @@ public class Credentials {
         }
     }
 
-    public class IKEv2: Credentials {
+    public class IKEv2: AVVPNCredentials {
         let remoteId: String
         let localId: String
 
