@@ -35,8 +35,8 @@ class AVVPNKeychainService: NSObject {
     // MARK: Save
 
     func save(key: String, value: String) {
-        let keyData: Data = key.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue), allowLossyConversion: false)!
-        let valueData: Data = value.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue), allowLossyConversion: false)!
+        let keyData: Data = key.data(using: .utf8, allowLossyConversion: false)!
+        let valueData: Data = value.data(using: .utf8, allowLossyConversion: false)!
 
         let keychainQuery = NSMutableDictionary();
         keychainQuery[kSecClassValue as! NSCopying] = kSecClassGenericPasswordValue
@@ -44,7 +44,7 @@ class AVVPNKeychainService: NSObject {
         keychainQuery[kSecAttrAccountValue as! NSCopying] = keyData
         keychainQuery[kSecAttrServiceValue as! NSCopying] = serviceValue
         keychainQuery[kSecAttrAccessibleValue as! NSCopying] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
-        keychainQuery[kSecValueData as! NSCopying] = valueData;
+        keychainQuery[kSecValueData as! NSCopying] = valueData
         // Delete any existing items
         SecItemDelete(keychainQuery as CFDictionary)
         SecItemAdd(keychainQuery as CFDictionary, nil)
@@ -52,9 +52,9 @@ class AVVPNKeychainService: NSObject {
 
     // MARK: Load
 
-    func load(key: String)->Data {
+    func load(key: String) -> Data {
 
-        let keyData: Data = key.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue), allowLossyConversion: false)!
+        let keyData: Data = key.data(using: .utf8, allowLossyConversion: false)!
         let keychainQuery = NSMutableDictionary();
         keychainQuery[kSecClassValue as! NSCopying] = kSecClassGenericPasswordValue
         keychainQuery[kSecAttrGenericValue as! NSCopying] = keyData
@@ -68,13 +68,13 @@ class AVVPNKeychainService: NSObject {
         let status = withUnsafeMutablePointer(to: &result) { SecItemCopyMatching(keychainQuery, UnsafeMutablePointer($0)) }
 
         if status == errSecSuccess {
-            if let data = result as! NSData? {
+            if let data = result as? NSData {
                 if let value = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue) {
                     print(value)
                 }
-                return data as Data;
+                return data as Data
             }
         }
-        return "".data(using: .utf8)!;
+        return "".data(using: .utf8)!
     }
 }

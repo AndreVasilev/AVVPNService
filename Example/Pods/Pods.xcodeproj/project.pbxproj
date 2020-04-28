@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		06E1EDF8212C77CEA74ACABA450AC83E /* Pods-AVVPNService_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3E9CCB8211D35D3B7593BDA7A8D66D /* Pods-AVVPNService_Example-dummy.m */; };
-		1542CE5F75B66CE67E0F5CF6E17F8749 /* AVVPNUserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917719D703B8D5B2F66260E1B0A53438 /* AVVPNUserDefaultsService.swift */; };
-		162043679BA5F947830641BE9C1F6971 /* AVVPNCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451B32A96BA548E4B91CE7938F47E2C /* AVVPNCredentials.swift */; };
-		56E2B2F6107AC65538CE6C79ED7AA3B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2AD101C6A390DE4C9AD9EC6864CEB516 /* AVVPNKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700F371086417A008CE0E7D0A454C4DF /* AVVPNKeychainService.swift */; };
+		32086999D838A5E816B29562131BF11E /* AVVPNUserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A85C0CFF8325784CD90F406EB32 /* AVVPNUserDefaultsService.swift */; };
 		5816DB050A0A2D5BA98118E9D92B03C1 /* Pods-AVVPNService_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 512404B0D6DC1B2CA1623E7573D7F028 /* Pods-AVVPNService_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60AAD4C00E8F092C2554A903BD47ACAB /* AVVPNService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 332CAD367D4B94B7741FB77AFCBD9823 /* AVVPNService-dummy.m */; };
+		7CC32F414EC0FDAFB49DF9EBCA6B9143 /* AVVPNCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B0A4260615DBDBC8D7A6D142DE5754 /* AVVPNCredentials.swift */; };
 		B6F7ECEBD952CF4DA29F844ACAA1F209 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		D4E37097CF328937FF3FEB3B173C6127 /* AVVPNService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FC3C478EB6F9614131D2B5CC6D9A5F7 /* AVVPNService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB62C736F463996ECAE9CF1824BDD7C3 /* AVVPNKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B369B7E5C6174997DD5E7298E882DC /* AVVPNKeychainService.swift */; };
-		F6107984443BD9653B8F7437ACEB98E7 /* AVVPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531658A21FD43D9F30F63A238ECAD925 /* AVVPNService.swift */; };
+		C07484DA5E8397C63870603CE6F6A67D /* AVVPNService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A71FB3FEE2BD12CC2081CC61A052F3D3 /* AVVPNService-dummy.m */; };
+		CB0277539D3084A05113F2AE9123A2F8 /* AVVPNServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BA95C6BD4CBBE9E1C295244935D5E9 /* AVVPNServiceDelegate.swift */; };
+		D13688AAC5EAFF1E8CC46E1CB6AD4031 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D2B91BD108B43D55F2AE0E6C912F6DB2 /* AVVPNService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1323D56E59797998A9C550674B344F3B /* AVVPNService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0EE0DA21E7790851886080B9D624D99 /* AVVPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B44C128CF47C813A9E5545CF157359 /* AVVPNService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,41 +31,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08B0A4260615DBDBC8D7A6D142DE5754 /* AVVPNCredentials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVVPNCredentials.swift; path = AVVPNService/Classes/AVVPNCredentials.swift; sourceTree = "<group>"; };
+		08BA95C6BD4CBBE9E1C295244935D5E9 /* AVVPNServiceDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVVPNServiceDelegate.swift; path = AVVPNService/Classes/AVVPNServiceDelegate.swift; sourceTree = "<group>"; };
+		10B44C128CF47C813A9E5545CF157359 /* AVVPNService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVVPNService.swift; path = AVVPNService/Classes/AVVPNService.swift; sourceTree = "<group>"; };
+		1323D56E59797998A9C550674B344F3B /* AVVPNService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AVVPNService-umbrella.h"; sourceTree = "<group>"; };
 		208B77694294D7D5096953F330C9D69B /* Pods-AVVPNService_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AVVPNService_Example.modulemap"; sourceTree = "<group>"; };
-		22AAE4A8CE59E76C1BBB818C5140EC7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		2FB0A7C3646486338294016B580CFF5E /* AVVPNService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AVVPNService.debug.xcconfig; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		332CAD367D4B94B7741FB77AFCBD9823 /* AVVPNService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AVVPNService-dummy.m"; sourceTree = "<group>"; };
-		35F2DC80928A7A00364EB49704017493 /* AVVPNService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AVVPNService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3B1217EDD0FC914BBAE546F9BBCF7F31 /* AVVPNService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AVVPNService.modulemap; sourceTree = "<group>"; };
+		39BB90CAE029E0AF0F1C7DDDB20B5A9E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		3FE6751556BFE30A701475CF3594FA82 /* Pods-AVVPNService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AVVPNService_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		512404B0D6DC1B2CA1623E7573D7F028 /* Pods-AVVPNService_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AVVPNService_Example-umbrella.h"; sourceTree = "<group>"; };
-		531658A21FD43D9F30F63A238ECAD925 /* AVVPNService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVVPNService.swift; path = AVVPNService/Classes/AVVPNService.swift; sourceTree = "<group>"; };
-		54616C8C1C407E6AEB99B89E28C350C0 /* AVVPNService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AVVPNService-Info.plist"; sourceTree = "<group>"; };
+		52FD8E728D5A80962AF64C3D6C5498AF /* AVVPNService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AVVPNService.modulemap; sourceTree = "<group>"; };
 		54FB08AC72EAD80B2C863838AF421856 /* Pods-AVVPNService_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AVVPNService_Example-frameworks.sh"; sourceTree = "<group>"; };
-		70B369B7E5C6174997DD5E7298E882DC /* AVVPNKeychainService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVVPNKeychainService.swift; path = AVVPNService/Classes/AVVPNKeychainService.swift; sourceTree = "<group>"; };
+		5D9CEABAB52FEB557DA78341F7FBBA20 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		60E47A85C0CFF8325784CD90F406EB32 /* AVVPNUserDefaultsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVVPNUserDefaultsService.swift; path = AVVPNService/Classes/AVVPNUserDefaultsService.swift; sourceTree = "<group>"; };
+		700F371086417A008CE0E7D0A454C4DF /* AVVPNKeychainService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVVPNKeychainService.swift; path = AVVPNService/Classes/AVVPNKeychainService.swift; sourceTree = "<group>"; };
 		748BE742E92B7681945FA2ABB7A5DF6B /* Pods-AVVPNService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AVVPNService_Example.release.xcconfig"; sourceTree = "<group>"; };
+		763079D3A758546159211794401B4C34 /* AVVPNService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AVVPNService.debug.xcconfig; sourceTree = "<group>"; };
+		7CD10ED238D696BA1A68821560EA2157 /* AVVPNService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AVVPNService-prefix.pch"; sourceTree = "<group>"; };
 		7D52868368C8FE1F8D38000ECBD7BB36 /* Pods-AVVPNService_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AVVPNService_Example-Info.plist"; sourceTree = "<group>"; };
-		8451B32A96BA548E4B91CE7938F47E2C /* AVVPNCredentials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVVPNCredentials.swift; path = AVVPNService/Classes/AVVPNCredentials.swift; sourceTree = "<group>"; };
-		863FAA5002F26B03966F63FF42681DD2 /* AVVPNService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AVVPNService-prefix.pch"; sourceTree = "<group>"; };
-		8FC3C478EB6F9614131D2B5CC6D9A5F7 /* AVVPNService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AVVPNService-umbrella.h"; sourceTree = "<group>"; };
-		917719D703B8D5B2F66260E1B0A53438 /* AVVPNUserDefaultsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVVPNUserDefaultsService.swift; path = AVVPNService/Classes/AVVPNUserDefaultsService.swift; sourceTree = "<group>"; };
+		947AC8D212ABD7E5E890FD6DDE2DFB45 /* AVVPNService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AVVPNService-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1FEA2AA18F860878FA3B79D2257EAE4 /* Pods-AVVPNService_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AVVPNService_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A71FB3FEE2BD12CC2081CC61A052F3D3 /* AVVPNService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AVVPNService-dummy.m"; sourceTree = "<group>"; };
 		ACD9E78DD8380D7123CEBAA3532A4328 /* Pods-AVVPNService_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AVVPNService_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		BCE7A949364814E2C97D88045DE56743 /* AVVPNService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AVVPNService.release.xcconfig; sourceTree = "<group>"; };
 		C28EC18A8DC6FC30A37FA4E674A4B7C9 /* AVVPNService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AVVPNService.framework; path = AVVPNService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F5E657C00AC7DD58BCB35094641FC7 /* Pods_AVVPNService_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AVVPNService_Example.framework; path = "Pods-AVVPNService_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E81E82B1B25904BAE5CC43355E0D5313 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		ED084F0184E99FD52C93549362C4FAAF /* AVVPNService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AVVPNService.release.xcconfig; sourceTree = "<group>"; };
+		EFCBDC87FA9C7AC508B765E50E181315 /* AVVPNService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AVVPNService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FD3E9CCB8211D35D3B7593BDA7A8D66D /* Pods-AVVPNService_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AVVPNService_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9859B1896AB5556B7639F2BD95F733F5 /* Frameworks */ = {
+		699C305814ABF1032EF77407C371E84B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56E2B2F6107AC65538CE6C79ED7AA3B4 /* Foundation.framework in Frameworks */,
+				D13688AAC5EAFF1E8CC46E1CB6AD4031 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,43 +98,27 @@
 			path = "Target Support Files/Pods-AVVPNService_Example";
 			sourceTree = "<group>";
 		};
-		495C3FC719F821F0F56BA44701218AE6 /* AVVPNService */ = {
+		4E20665B91516299A73A7D32957A9E4D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8451B32A96BA548E4B91CE7938F47E2C /* AVVPNCredentials.swift */,
-				70B369B7E5C6174997DD5E7298E882DC /* AVVPNKeychainService.swift */,
-				531658A21FD43D9F30F63A238ECAD925 /* AVVPNService.swift */,
-				917719D703B8D5B2F66260E1B0A53438 /* AVVPNUserDefaultsService.swift */,
-				7B283A923B2FFFE719592094B642D48E /* Pod */,
-				54585F71DD22684803D707B58D9E8D24 /* Support Files */,
+				8443AA93D2B2967A584CBAB69D291860 /* AVVPNService */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8443AA93D2B2967A584CBAB69D291860 /* AVVPNService */ = {
+			isa = PBXGroup;
+			children = (
+				08B0A4260615DBDBC8D7A6D142DE5754 /* AVVPNCredentials.swift */,
+				700F371086417A008CE0E7D0A454C4DF /* AVVPNKeychainService.swift */,
+				10B44C128CF47C813A9E5545CF157359 /* AVVPNService.swift */,
+				08BA95C6BD4CBBE9E1C295244935D5E9 /* AVVPNServiceDelegate.swift */,
+				60E47A85C0CFF8325784CD90F406EB32 /* AVVPNUserDefaultsService.swift */,
+				92A84FE7720283C09625D5A09BEF8AD7 /* Pod */,
+				CFAF4F1D7468A0425F17C08EC2C58D6B /* Support Files */,
 			);
 			name = AVVPNService;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		54585F71DD22684803D707B58D9E8D24 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3B1217EDD0FC914BBAE546F9BBCF7F31 /* AVVPNService.modulemap */,
-				332CAD367D4B94B7741FB77AFCBD9823 /* AVVPNService-dummy.m */,
-				54616C8C1C407E6AEB99B89E28C350C0 /* AVVPNService-Info.plist */,
-				863FAA5002F26B03966F63FF42681DD2 /* AVVPNService-prefix.pch */,
-				8FC3C478EB6F9614131D2B5CC6D9A5F7 /* AVVPNService-umbrella.h */,
-				2FB0A7C3646486338294016B580CFF5E /* AVVPNService.debug.xcconfig */,
-				ED084F0184E99FD52C93549362C4FAAF /* AVVPNService.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/AVVPNService";
-			sourceTree = "<group>";
-		};
-		7B283A923B2FFFE719592094B642D48E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				35F2DC80928A7A00364EB49704017493 /* AVVPNService.podspec */,
-				22AAE4A8CE59E76C1BBB818C5140EC7D /* LICENSE */,
-				E81E82B1B25904BAE5CC43355E0D5313 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		882FB1E7FF99DB0C94221FDC32C63898 /* Targets Support Files */ = {
@@ -141,6 +127,16 @@
 				16BC1DFD84EE5FA0994897606AE19E53 /* Pods-AVVPNService_Example */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		92A84FE7720283C09625D5A09BEF8AD7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				EFCBDC87FA9C7AC508B765E50E181315 /* AVVPNService.podspec */,
+				39BB90CAE029E0AF0F1C7DDDB20B5A9E /* LICENSE */,
+				5D9CEABAB52FEB557DA78341F7FBBA20 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -155,11 +151,26 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				E739DD0C976714A12B36AB20B4481FB4 /* Development Pods */,
+				4E20665B91516299A73A7D32957A9E4D /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				E4AB4803779A607426EC5DE43E039D5B /* Products */,
 				882FB1E7FF99DB0C94221FDC32C63898 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		CFAF4F1D7468A0425F17C08EC2C58D6B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				52FD8E728D5A80962AF64C3D6C5498AF /* AVVPNService.modulemap */,
+				A71FB3FEE2BD12CC2081CC61A052F3D3 /* AVVPNService-dummy.m */,
+				947AC8D212ABD7E5E890FD6DDE2DFB45 /* AVVPNService-Info.plist */,
+				7CD10ED238D696BA1A68821560EA2157 /* AVVPNService-prefix.pch */,
+				1323D56E59797998A9C550674B344F3B /* AVVPNService-umbrella.h */,
+				763079D3A758546159211794401B4C34 /* AVVPNService.debug.xcconfig */,
+				BCE7A949364814E2C97D88045DE56743 /* AVVPNService.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AVVPNService";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -179,22 +190,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E739DD0C976714A12B36AB20B4481FB4 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				495C3FC719F821F0F56BA44701218AE6 /* AVVPNService */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2F7E6A8AD85EADDD5B8C9352E6341E69 /* Headers */ = {
+		117256B8EE59C66846E40F0CE3C0B1CC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E37097CF328937FF3FEB3B173C6127 /* AVVPNService-umbrella.h in Headers */,
+				D2B91BD108B43D55F2AE0E6C912F6DB2 /* AVVPNService-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,12 +214,12 @@
 /* Begin PBXNativeTarget section */
 		2E70EE7A4D901241170B22F213FA476B /* AVVPNService */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3D7540BECA7829A68C78524045D96A4 /* Build configuration list for PBXNativeTarget "AVVPNService" */;
+			buildConfigurationList = 782F0F01C074CE13F694ED9C2C6B4175 /* Build configuration list for PBXNativeTarget "AVVPNService" */;
 			buildPhases = (
-				2F7E6A8AD85EADDD5B8C9352E6341E69 /* Headers */,
-				69325D20B67B27AD4AFE45562E226AD4 /* Sources */,
-				9859B1896AB5556B7639F2BD95F733F5 /* Frameworks */,
-				26A70BA8BAE339DF38785EBACBB57F79 /* Resources */,
+				117256B8EE59C66846E40F0CE3C0B1CC /* Headers */,
+				E174D02ECBF2C69157FCE60A21D2B319 /* Sources */,
+				699C305814ABF1032EF77407C371E84B /* Frameworks */,
+				4E9138196E2BFA70B49A5D418C315F13 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -275,7 +278,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		26A70BA8BAE339DF38785EBACBB57F79 /* Resources */ = {
+		4E9138196E2BFA70B49A5D418C315F13 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -300,15 +303,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69325D20B67B27AD4AFE45562E226AD4 /* Sources */ = {
+		E174D02ECBF2C69157FCE60A21D2B319 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				162043679BA5F947830641BE9C1F6971 /* AVVPNCredentials.swift in Sources */,
-				DB62C736F463996ECAE9CF1824BDD7C3 /* AVVPNKeychainService.swift in Sources */,
-				60AAD4C00E8F092C2554A903BD47ACAB /* AVVPNService-dummy.m in Sources */,
-				F6107984443BD9653B8F7437ACEB98E7 /* AVVPNService.swift in Sources */,
-				1542CE5F75B66CE67E0F5CF6E17F8749 /* AVVPNUserDefaultsService.swift in Sources */,
+				7CC32F414EC0FDAFB49DF9EBCA6B9143 /* AVVPNCredentials.swift in Sources */,
+				2AD101C6A390DE4C9AD9EC6864CEB516 /* AVVPNKeychainService.swift in Sources */,
+				C07484DA5E8397C63870603CE6F6A67D /* AVVPNService-dummy.m in Sources */,
+				E0EE0DA21E7790851886080B9D624D99 /* AVVPNService.swift in Sources */,
+				CB0277539D3084A05113F2AE9123A2F8 /* AVVPNServiceDelegate.swift in Sources */,
+				32086999D838A5E816B29562131BF11E /* AVVPNUserDefaultsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,41 +361,9 @@
 			};
 			name = Debug;
 		};
-		6891917ADB40AA7BCF92207C4E615E3F /* Release */ = {
+		5F59FAD6DB14DEF04396139E8F2976C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED084F0184E99FD52C93549362C4FAAF /* AVVPNService.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AVVPNService/AVVPNService-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AVVPNService/AVVPNService-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AVVPNService/AVVPNService.modulemap";
-				PRODUCT_MODULE_NAME = AVVPNService;
-				PRODUCT_NAME = AVVPNService;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9CD2D7CB8AFD92589E6758B0AAF24E96 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FB0A7C3646486338294016B580CFF5E /* AVVPNService.debug.xcconfig */;
+			baseConfigurationReference = 763079D3A758546159211794401B4C34 /* AVVPNService.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -544,6 +516,38 @@
 			};
 			name = Debug;
 		};
+		EF238D863540234CCB64BB28A438C2BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE7A949364814E2C97D88045DE56743 /* AVVPNService.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AVVPNService/AVVPNService-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AVVPNService/AVVPNService-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AVVPNService/AVVPNService.modulemap";
+				PRODUCT_MODULE_NAME = AVVPNService;
+				PRODUCT_NAME = AVVPNService;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		FDA6901ECB54AD99667BDA8254EB37CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 748BE742E92B7681945FA2ABB7A5DF6B /* Pods-AVVPNService_Example.release.xcconfig */;
@@ -590,20 +594,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		782F0F01C074CE13F694ED9C2C6B4175 /* Build configuration list for PBXNativeTarget "AVVPNService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F59FAD6DB14DEF04396139E8F2976C7 /* Debug */,
+				EF238D863540234CCB64BB28A438C2BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AB469BF4649347B8634F87DA52DF9760 /* Build configuration list for PBXNativeTarget "Pods-AVVPNService_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06D1B334588C7E64156796ADCFD23F42 /* Debug */,
 				FDA6901ECB54AD99667BDA8254EB37CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F3D7540BECA7829A68C78524045D96A4 /* Build configuration list for PBXNativeTarget "AVVPNService" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9CD2D7CB8AFD92589E6758B0AAF24E96 /* Debug */,
-				6891917ADB40AA7BCF92207C4E615E3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

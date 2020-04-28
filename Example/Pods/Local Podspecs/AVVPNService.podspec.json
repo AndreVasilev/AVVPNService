@@ -1,6 +1,6 @@
 {
   "name": "AVVPNService",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "AVVPNService simplifies the setup of the VPN (IPSec or IKEv2)",
   "description": "AVVPNService simplifies the setup of the VPN.\nJust initialize Credentials struct and call connect method.\nYou can observe NEVPNStatus be setting the delegate or subscribing NEVPNStatusDidChange notification.",
   "homepage": "https://github.com/AndreVasilev/AVVPNService",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/AndreVasilev/AVVPNService.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "9.3"

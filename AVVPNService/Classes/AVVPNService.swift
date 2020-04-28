@@ -9,10 +9,6 @@
 import Foundation
 import NetworkExtension
 
-public protocol AVVPNServiceDelegate: AnyObject {
-    func vpnService(_ service: AVVPNService, didChange status: NEVPNStatus)
-}
-
 public class AVVPNService {
 
     public static let shared = AVVPNService()
@@ -24,14 +20,12 @@ public class AVVPNService {
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeStatus(_:)), name: NSNotification.Name.NEVPNStatusDidChange, object: nil)
     }
 
-    public func connect(credentials: AVVPNCredentials, _ completion: @escaping (Error?) -> Void) {
-        guard let protocolConfiguration: NEVPNProtocol = getProtocolConfiguration(credentials) else {
-            fatalError("Unhandled credentials")
-        }
-        vpnManager.loadFromPreferences(completionHandler: loadHandler(configuration: protocolConfiguration, credentials: credentials, completion))
+    //Set credentials = nil if you don't want to re-save protocolConfiguration
+    public func connect(credentials: AVVPNCredentials? = nil, _ completion: @escaping (Error?) -> Void) {
+        vpnManager.loadFromPreferences(completionHandler: loadHandler(credentials: credentials, toSave: true, completion))
     }
 
-    public func disconnect() ->Void {
+    public func disconnect() {
         vpnManager.connection.stopVPNTunnel()
     }
 
@@ -104,18 +98,27 @@ private extension AVVPNService {
         }
     }
 
-    func loadHandler(configuration: NEVPNProtocol, credentials: AVVPNCredentials, _ completion: @escaping (Error?) -> Void) -> (Error?) -> Void {
+    func loadHandler(credentials: AVVPNCredentials?, toSave: Bool, _ completion: @escaping (Error?) -> Void) -> (Error?) -> Void {
         return { error in
             guard error == nil else {
                 print("⚠️ Could not load VPN Configuration: \(error!.localizedDescription)")
                 return completion(error)
             }
-
-            self.vpnManager.isEnabled = true
-            self.vpnManager.localizedDescription = credentials.title
-            self.vpnManager.protocolConfiguration = configuration
-            self.vpnManager.saveToPreferences(completionHandler: self.saveHandler(credentials: credentials, completion))
-    } }
+            if let credentials = credentials,
+                toSave {
+                self.vpnManager.isEnabled = true
+                self.vpnManager.localizedDescription = credentials.title
+                self.vpnManager.protocolConfiguration = self.delegate?.getProtocolConfiguration(credentials) ?? self.getProtocolConfiguration(credentials)
+                self.vpnManager.saveToPreferences(completionHandler: self.saveHandler(credentials: credentials, completion))
+            } else {
+                //Add delay if protocolConfiguration was saved. Otherwise protocolConfiguration won't be reset
+                let delay = toSave ? 0 : 0.3
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+                    self?.startVPNTunnel(credentials: credentials, completion)
+                }
+            }
+        }
+    }
 
     func saveHandler(credentials: AVVPNCredentials, _ completion: @escaping (Error?) -> Void) -> (Error?) -> Void {
         return { error in
@@ -123,20 +126,26 @@ private extension AVVPNService {
                 print("⚠️ Could not save VPN Configuration: \(error!.localizedDescription)")
                 return completion(error)
             }
+            self.vpnManager.loadFromPreferences(completionHandler: self.loadHandler(credentials: credentials, toSave: false, completion))
+        }
+    }
 
-            do {
-                try self.vpnManager.connection.startVPNTunnel()
-                completion(nil)
-            } catch let error {
-                print("⚠️ Starting VPN Tunnel failed: \(error.localizedDescription)");
-                if (error as? NEVPNError)?.code == NEVPNError.Code.configurationInvalid,
-                    !AVVPNUserDefaultsService.isPreferencesSaved {
-                    //For no known reason the process of saving/loading the VPN configurations fails. On the 2nd time it works
-                    self.connect(credentials: credentials, completion)
-                    AVVPNUserDefaultsService.didSavePreferences()
-                } else {
-                    completion(error)
-                }
+    func startVPNTunnel(credentials: AVVPNCredentials?, _ completion: @escaping (Error?) -> Void) {
+        guard vpnManager.protocolConfiguration != nil else {
+            return completion(NEVPNError(.configurationInvalid))
+        }
+        do {
+            try vpnManager.connection.startVPNTunnel()
+            completion(nil)
+        } catch let error {
+            print("⚠️ Starting VPN Tunnel failed: \(error.localizedDescription)");
+            if (error as? NEVPNError)?.code == NEVPNError.Code.configurationInvalid,
+                !AVVPNUserDefaultsService.isPreferencesSaved {
+                //For no known reason the process of saving/loading the VPN configurations fails. On the 2nd time it works
+                connect(credentials: credentials, completion)
+                AVVPNUserDefaultsService.didSavePreferences()
+            } else {
+                completion(error)
             }
         }
     }

@@ -117,9 +117,8 @@ private extension ViewController {
     }
 
     func connect() {
-        if let credentials = getCredentials() {
-            interactor.connect(credentials: credentials)
-        }
+        let credentials = getCredentials()
+        interactor.connect(credentials: credentials)
     }
 
     func getCredentials() -> AVVPNCredentials? {
