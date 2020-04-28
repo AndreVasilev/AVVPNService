@@ -14,7 +14,6 @@ public class AVVPNService {
     public static let shared = AVVPNService()
     public weak var delegate: AVVPNServiceDelegate?
     public let vpnManager = NEVPNManager.shared()
-    public var status: NEVPNStatus { return vpnManager.connection.status }
 
     private init() {
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeStatus(_:)), name: NSNotification.Name.NEVPNStatusDidChange, object: nil)
@@ -38,6 +37,16 @@ public class AVVPNService {
             if let completion = completion {
                 completion($0)
             }
+        }
+    }
+
+    public func getStatus(_ completion: @escaping (NEVPNStatus?) -> Void) {
+        if vpnManager.protocolConfiguration == nil {
+            vpnManager.loadFromPreferences { _ in
+                completion(self.vpnManager.connection.status)
+            }
+        } else {
+            completion(vpnManager.connection.status)
         }
     }
 }

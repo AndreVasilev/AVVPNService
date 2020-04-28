@@ -1,5 +1,5 @@
 PODS:
-  - AVVPNService (0.1.2)
+  - AVVPNService (0.1.3)
 
 DEPENDENCIES:
   - AVVPNService (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AVVPNService: 1a689f7ceec67e88bf5761def35e894dec3d40a1
+  AVVPNService: 3f6a4708a710d5a1895d15710479f37454352441
 
 PODFILE CHECKSUM: 554d2a145c8e4ba31ce36b35ca7d9d41444b84b8
 
