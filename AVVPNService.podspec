@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AVVPNService'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'AVVPNService simplifies the setup of the VPN (IPSec or IKEv2)'
 
 # This description is used to generate tags and improve search results.
@@ -31,6 +31,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.3'
   s.swift_version         = '5.0'
 
-  s.source_files = 'AVVPNService/Classes/**/*'
+  s.source_files = 'Sources/AVVPNService/**/*'
 
 end
